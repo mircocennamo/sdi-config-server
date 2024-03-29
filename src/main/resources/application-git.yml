@@ -1,0 +1,20 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://192.168.15.174/sdi/sdi-config-repository.git
+          username: root
+          password: Passw0rd
+          clone-on-start: true
+          skip-ssl-validation: true
+          defult-label: main
+          search-paths:
+            - config
+            - messages
+

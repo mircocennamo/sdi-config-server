@@ -1,0 +1,4 @@
+server:
+  servlet:
+    context-path: /normalizzatore
+  port: 8095

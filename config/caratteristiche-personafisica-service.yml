@@ -1,0 +1,35 @@
+server:
+  servlet:
+    context-path: /caratteristiche-personafisica
+  port: 8092
+
+---
+#configurazione ambiente locale
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    url: ENC(MUJKfPnoFkVkPVg+XFdHob4sAEfDI8kIMLwb+bRupVv4qv76JQy7f6YrpCyDJwTu+RwkutVyAgQ=)
+    username: ENC(2e9Gx+QJBartl2xIDrBXIRo5WOzUQ91V)
+    password: ENC(pxSpC9lRD6mNueouzFPwOPWBisaNf9fi)
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    show-sql: true
+
+---
+#configurazione ambiente sviluppo
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: ENC(gfa/Dc+3Zi5BaLSNFi9sijm1DYm3JPefBbhSJ8ciAs7ukF75D/kM7E11c3XaNmuhMSIReXPV6hSBffW6J1ztg/Vc99vbj2/f)
+    username: ENC(2e9Gx+QJBartl2xIDrBXIRo5WOzUQ91V)
+    password: ENC(pxSpC9lRD6mNueouzFPwOPWBisaNf9fi)
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    show-sql: true
+
+
+
